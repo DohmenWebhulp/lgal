@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class AddBoek extends Migration
+class AddLink extends Migration
 {
     public function up()
     {
@@ -19,26 +19,22 @@ class AddBoek extends Migration
                 'type' => 'NVARCHAR',
                 'constraint' => 255, 
             ],
-            'auteur' => [
+            'url' => [
                 'type' => 'NVARCHAR',
                 'constraint' => 255, 
             ],
-            'samenvatting' => [
-                'type' => 'text',
-                'null' => true,
-            ],
-            'afbeelding' => [
+            'type' => [
                 'type' => 'NVARCHAR',
                 'constraint' => 255, 
-            ]
+            ],
         ];
         $this->forge->addKey('id', true, true);
         $this->forge->addField($fields);
-        $this->forge->createTable('boeken');
+        $this->forge->createTable('links');
     }
 
     public function down()
     {
-        $this->forge->dropTable('boeken');
+        $this->forge->dropTable('links');
     }
 }
