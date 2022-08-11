@@ -23,7 +23,7 @@ class AddFilm extends Migration
                 'type' => 'NVARCHAR',
                 'constraint' => 255, 
             ],
-            'samenvatting' => [
+            'beschrijving' => [
                 'type' => 'text',
                 'null' => true,
             ],
