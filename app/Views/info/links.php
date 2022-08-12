@@ -15,8 +15,8 @@
                 <h3><?= esc($type) ?></h3>
                 <?php foreach ($links as $link): ?>
                     <?php if ($link['type'] == $type): ?>
-                        <ul>
-                            <li>
+                        <ul class="list-group">
+                            <li class="list-group-item">
                                 <a href="<?= esc($link['url']) ?>"><?= esc($link['titel']) ?></a>
                             </li>
                         </ul>
