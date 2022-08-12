@@ -12,6 +12,6 @@ class Link extends Model
 
     public function getLinks()
     {
-        
+        return $this->findAll();
     }
 }

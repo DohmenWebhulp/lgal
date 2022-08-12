@@ -12,6 +12,6 @@ class Film extends Model
 
     public function getFilms()
     {
-        
+        return $this->findAll();
     }
 }

@@ -12,6 +12,6 @@ class Boek extends Model
 
     public function getBoeken()
     {
-        
+        return $this->findAll();
     }
 }
