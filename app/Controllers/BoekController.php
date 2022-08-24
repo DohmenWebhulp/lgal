@@ -11,6 +11,6 @@ class BoekController extends BaseController
         $data = [
             'boeken' => $model->getBoeken()
         ];
-        return view('info/boeken', $data);
+        return view('navbar').view('info/boeken', $data).view('footer');
     }
 }

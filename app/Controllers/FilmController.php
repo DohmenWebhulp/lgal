@@ -11,6 +11,6 @@ class FilmController extends BaseController
         $data = [
             'films' => $model->getFilms()
         ];
-        return view('info/films', $data);
+        return view('navbar').view('info/films', $data).view('footer');
     }
 }

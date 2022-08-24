@@ -4,13 +4,16 @@ namespace App\Controllers;
 
 class Activiteiten extends BaseController
 {
-    public function index($seg1 = false, $seg2 = false)
+    public function brunssum()
     {
-        if(!$seg2)
-        {
-            return view('navbar').view('activiteiten/' . $seg1);
-        }else{
-            return view('navbar').view('activiteiten/lotgenotenavonden/' . $seg2);
-        }  
+        return view('navbar').view('activiteiten/lotgenotenavonden/brunssum').view('footer'); 
+    }
+    public function maastricht()
+    {
+        return view('navbar').view('activiteiten/lotgenotenavonden/maastricht').view('footer'); 
+    }
+    public function anders()
+    {
+        return view('navbar').view('activiteiten/anders').view('footer'); 
     }
 }

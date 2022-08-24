@@ -14,4 +14,9 @@ class Link extends Model
     {
         return $this->findAll();
     }
+
+    public function getNieuws()
+    {
+        return $this->where('type', 'Nieuwsbrieven')->findAll();
+    }
 }

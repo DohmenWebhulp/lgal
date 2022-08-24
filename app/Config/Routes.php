@@ -37,11 +37,36 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 $routes->get('/', 'Home::index');
-$routes->get('about/(:segment)', 'About::index/$1');
-$routes->get('activiteiten/(:any)', 'Activiteiten::index/$1');
+
+// Over Ons pagina's
+
+$routes->get('historie', 'About::historie');
+$routes->get('bestuur', 'About::bestuur');
+$routes->get('stichting', 'About::stichting');
+
+//Activiteiten pagina's
+
+$routes->get('brunssum', 'Activiteiten::brunssum');
+$routes->get('maastricht', 'Activiteiten::maastricht');
+$routes->get('anders', 'Activiteiten::anders');
+
+//Bronnen pagina's
+
+$routes->get('documenten', 'Bron::documenten');
+
+//Meer info pagina's
+
 $routes->get('boeken', 'BoekController::index');
 $routes->get('films', 'FilmController::index');
 $routes->get('links', 'LinkController::index');
+$routes->get('autisme', 'Info::autisme');
+$routes->get('vacatures', 'Info::vacatures');
+$routes->get('fotos', 'Info::fotos');
+$routes->get('nieuws', 'LinkController::nieuws');
+
+//Contact pagina's
+
+$routes->get('contact', 'Contact::contact');
 
 /*
  * --------------------------------------------------------------------
